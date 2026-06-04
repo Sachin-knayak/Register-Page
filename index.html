@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Register your form</h1>
+
+        <form class="form">
+            <label class="label">Full Name</label>
+
+            <input id="name" type="text" placeholder="Enter your name">
+
+            <label class="label">Phone Number</label>
+
+            <input id="number" type="tel" placeholder="+91 6370 2525 33">
+
+            <label class="label">Email</label>
+
+            <input id="email" type="email" placeholder="example12@gmail.com">
+
+            <label class="label">Password</label>
+
+            <input id="password" type="password" placeholder="**********">
+
+            <label class="label">Confirm Password</label>
+
+            <input id="copassword" type="password" placeholder="**********">
+
+            <button id="btn">Register</button>
+            <p>Already have an account? <span> <a href="index.html">Login</a></span></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click',(event)=>{
+            event.preventDefault();
+            let name = document.getElementById('name').value
+            let number = document.getElementById('number').value
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+            let copassword = document.getElementById('copassword').value
+
+            console.log(name + "" + number + "" + email+"" +password+ ""+ copassword);
+
+            if(name == "" || number == "" || email == "" || password=="" || copassword==""){
+                alert("Enter your details")
+            }else{
+                alert("Register successfull")
+            }
+            
+        })
+    </script>
+</body>
+</html>
